@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Main {
   public static void main(String[] args) {
 
@@ -34,6 +36,25 @@ class Main {
     testClass.setNum(34);
     int num = testClass.getNum();
     System.out.println(num);
+
+
+    /*
+    Gets the Immutable HasMap
+    */
+    HashMap<String, String> testMap = new HashMap<String, String>(){{
+      put("2","Second");
+      }};
+    ImmutableClass immutableObj = new ImmutableClass(1,
+    "First", testMap);
+
+    System.out.println(immutableObj.getMap());
+    testMap.put("3","Third");
+    System.out.println(immutableObj.getMap());
+
+    HashMap<String, String> immutableMapTest = (HashMap<String, String>) immutableObj.getMap();
+    immutableMapTest.put("4", "Four");
+    System.out.println(immutableObj.getMap());
+
   }
 }
 
