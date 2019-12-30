@@ -58,3 +58,16 @@ class Main {
   }
 }
 
+/*
+Day 4 -> Lesson 5: Overloading vs Overridding
+
+1)Overloading is when 2 methods have same name but
+different parameters in the same class(ie. method signature is different)
+
+2)Overridding is when 2 methods have the same name with same parameters in different class 
+*/
+
+
+/*
+There is no delete in Java. JVM has a reference collector that relies on the reference count. Once there are no more references to the object, the object becomes available for collection by the garbage collector.
+*/
